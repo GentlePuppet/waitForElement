@@ -1,5 +1,5 @@
 /**
- * waitForElement():
+ * waitForKeyElements():
  * A modern replacement for waitForKeyElements using MutationObserver.
  * 
  * Example:
@@ -12,7 +12,7 @@
  * @param {boolean} [once=true] - If true, stops observing after first match.
  * @param {string|Element|jQuery} [root=document] - Optional root or iframe selector to observe within.
  */
-function waitForElement(selector, callback, once = true, root = document) {
+function waitForKeyElements(selector, callback, once = true, root = document) {
     const $root = (root instanceof $) ? root : $(root);
     const targetNode = $root[0] || document;
 
