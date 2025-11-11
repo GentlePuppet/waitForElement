@@ -1,5 +1,5 @@
 waitForElement | 
-A replacement for [waitForKeyElements](https://gist.github.com/BrockA/2625891#file-waitforkeyelements-js) using MutationObserver.
+A alternative for [waitForKeyElements](https://gist.github.com/BrockA/2625891#file-waitforkeyelements-js) that uses MutationObserver instead of intervals.
 
 
 This is basically just a drop in direct conversion replacement to using MutationObserver, so you don't have to change anything to switch over to this version.
