@@ -33,6 +33,20 @@ Examples:
     waitForElement("div.rainbow_tag", deleteDiv, 0);
     waitForElement("div.dislike", deleteDiv, 0);
 ```
+```js
+    // ==UserScript==
+    // @name         Example UserScript using waitForElement
+    // @require      https://code.jquery.com/jquery-3.7.1.min.js
+    // @require      https://raw.githubusercontent.com/GentlePuppet/waitForElement/refs/heads/main/waitForElement.js
+    // ==/UserScript==
+    
+    waitForElement("div.comments", (object) => {
+        object.text("do something only for the first found object...");
+    });
+```
+
+
+
 waitForElement(selector, callback, 1, document)
 * selector {string} - jQuery selector for the desired element(s).
 * callback {function} - Function to call when elements are found. Receives a jQuery-wrapped element.
