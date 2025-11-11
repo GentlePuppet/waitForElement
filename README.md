@@ -4,7 +4,7 @@ A replacement for [waitForKeyElements](https://gist.github.com/BrockA/2625891#fi
 
 This is basically just a drop in direct conversion replacement to using MutationObserver, so you don't have to change anything to switch over to this version.
 
-Might not be recommened for excessive use on sites that have a lot of dymanic loading and such, for cases like that just use the original version.
+Definitely recommened for excessive use on sites that have a lot of dymanic loading and such, or else you'll lag or freeze the page, for cases like that just use the original version.
 
 Examples:
 ```js
