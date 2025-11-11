@@ -6,15 +6,32 @@ This is basically just a direct conversion to using MutationObserver
 
 Examples:
 ```js
-    waitForElement("div.comments", (el) => {
-      el.text("Comment found and updated!");
+    waitForElement("div.comments", (object) => {
+      object.text("do something only for the first found object...");
     });
 ```
 ```js
-    waitForElement("div.comments", commentFunc);
-    function commentFunc() {
-      dosomething...
-    } 
+    waitForElement("div.comments", (object) => {
+      object.text("keep doing something to all found objects...");
+    }, 0);
+```
+```js
+    function deleteDiv(object) {
+      object.remove() // Remove and stop waiting for matching objects
+    }
+
+    waitForElement("div#1", deleteDiv);
+    waitForElement("div#3", deleteDiv);
+    waitForElement("div#6", deleteDiv);
+```
+```js
+    function deleteDiv(object) {
+      object.remove() // Remove and keep waiting for new objects to also remove
+    }
+
+    waitForElement("div.magic", deleteDiv, 0);
+    waitForElement("div.rainbow_tag", deleteDiv, 0);
+    waitForElement("div.dislike", deleteDiv, 0);
 ```
 waitForElement(selector, callback, 1, document)
 * selector {string} - jQuery selector for the desired element(s).
