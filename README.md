@@ -1,6 +1,9 @@
 waitForElement | 
 A replacement for [waitForKeyElements](https://gist.github.com/BrockA/2625891#file-waitforkeyelements-js) using MutationObserver.
 
+
+This is basically just a direct conversion to using MutationObserver
+
 Examples:
 ```js
     waitForElement("div.comments", (el) => {
