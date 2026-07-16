@@ -1,4 +1,21 @@
-waitForElement | 
+# [waitForElementCancel](https://raw.githubusercontent.com/GentlePuppet/waitForElement/refs/heads/main/waitForElementCancel.js) 
+Exactly the same as [waitForKeyElements](https://gist.github.com/BrockA/2625891#file-waitforkeyelements-js) but with a cancel switch to stop a current running wait.
+Example Usage: 
+```js
+    waitForKeyElements("div", (object) => {
+      object.text("do something only for the first found object...");
+    });
+    
+    waitForKeyElements.cancel("div")
+```
+
+<br>
+<hr>
+<br>
+<br>
+<br>
+
+# [waitForElement](https://raw.githubusercontent.com/GentlePuppet/waitForElement/refs/heads/main/waitForElement.js) 
 A alternative for [waitForKeyElements](https://gist.github.com/BrockA/2625891#file-waitforkeyelements-js) that uses MutationObserver instead of intervals.
 
 
